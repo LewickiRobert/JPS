@@ -27,5 +27,7 @@
 
 </form>
 
+<a href="http://localhost:8080/search.jsp?query=JAVAzlink&page=26&sort=desc"> link </a>
+
 </body>
 </html>
