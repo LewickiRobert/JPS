@@ -1,4 +1,5 @@
-<%--
+<%@ page import="jdk.nashorn.internal.objects.Global" %>
+<%@ page import="java.time.LocalDateTime" %><%--
   Created by IntelliJ IDEA.
   User: Robert
   Date: 22.08.2020
@@ -12,7 +13,13 @@
 </head>
 <body>
     <p>
-        Dzisiaj jest <%= java.time.LocalDateTime.now().toString() %>
+        Dzisiaj jest
+        <%
+
+            String time = LocalDateTime.now().toString();
+            out.print(time);
+
+        %>
     </p>
 </body>
 </html>
