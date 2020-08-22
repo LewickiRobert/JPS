@@ -12,7 +12,9 @@
     <title>Dyrektywy w JSP</title>
 </head>
 <body>
-<jsp:forward page="redirected.jsp"></jsp:forward>
+<jsp:forward page="redirected.jsp">
+    <jsp:param name="myParam" value="my parameter"/>
+</jsp:forward>
 <%--<jps:forward page="redirected.jsp"></jps:forward> --%>
 
 </body>
