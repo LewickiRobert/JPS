@@ -11,15 +11,15 @@
 
 <html>
 <head>
-    <title>Osługa ciasteczek</title>
+    <title>Osługa sesji</title>
 </head>
 <body>
-<h2>Obsługa Cookie</h2>
+<h2>Obsługa sesji</h2>
 <%
-    Cookie cookie = new Cookie("searchId", String.valueOf(123456));
-    cookie.setMaxAge(60*60*24);
-    response.addCookie(cookie);
+   request.getSession().invalidate();
+    HttpSession newSession = request.getSession(true);
+    newSession.setAttribute("userId",123456);
 %>
-
+<a href="session.jsp">session...</a>
 </body>
 </html>
