@@ -13,8 +13,8 @@
 <body>
 <%
     Integer userId = (Integer) session.getAttribute("userId");
-    //Integer userIdObject1 = (Integer) userIdObject;
-    //  Date creationTime = new Date(session.getCreationTime());
+    Date creationTime = new Date(session.getCreationTime());
+    Date lastAccessTime = new Date(session.getLastAccessedTime());
 %>
 
 <a href="welcome.jsp">welcome...</a>
@@ -24,11 +24,21 @@
         <th>Value</th>
     </tr>
     <tr>
+        <td>Session Id</td>
+        <td><% out.print(session.getId()); %></td>
+    </tr>
+    <tr>
         <td>UserId</td>
         <td><% out.print(userId); %></td>
-
     </tr>
-
+    <tr>
+        <td>Creation Time</td>
+        <td><% out.print(creationTime); %></td>
+    </tr>
+    <tr>
+        <td>Last Access Time</td>
+        <td><% out.print(lastAccessTime); %></td>
+    </tr>
 </table>
 </body>
 </html>
